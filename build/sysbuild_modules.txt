@@ -1,1 +1,0 @@
-"mcuboot":"/home/amarjay/Desktop/code/first-zephyr/bootloader/mcuboot":"/home/amarjay/Desktop/code/first-zephyr/bootloader/mcuboot/boot/zephyr/sysbuild"
