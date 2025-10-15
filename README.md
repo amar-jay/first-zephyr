@@ -21,7 +21,7 @@ Build and flash (example, run from this workspace root):
 
 ```bash
 # set ZEPHYR_BASE to your Zephyr installation if not already set
-west build -b esp32s3_devkitc esp32-basic
+west build -b esp32s3_devkitc/esp32s3/procpu esp32-basic
 west flash
 ```
 
