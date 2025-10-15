@@ -1,6 +1,6 @@
-# 0 "/home/amarjay/Desktop/code/first-zephyr/zephyr/misc/empty_file.c"
-# 0 "<built-in>"
-# 0 "<command-line>"
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/misc/empty_file.c"
+# 1 "<built-in>" 1
+# 364 "<built-in>"
 # 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts" 1
 
 
@@ -9,32 +9,39 @@
 
 /dts-v1/;
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_wroom_n8.dtsi" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_wroom_n8.dtsi" 1 3
 
 
 
 
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 1 3
 
 
 
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/mem.h" 1 3 4
-# 7 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/freq.h" 1 3 4
-# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/xtensa.dtsi" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/mem.h" 1 3
+# 7 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/freq.h" 1 3
+# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/xtensa.dtsi" 1 3
 
 
 
 
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/skeleton.dtsi" 1 3 4
-# 9 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/skeleton.dtsi" 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/common/skeleton.dtsi" 1 3
+
+
+
+
+
+
+
+
 / {
  #address-cells = <1>;
  #size-cells = <1>;
@@ -43,7 +50,7 @@
 
  aliases {};
 };
-# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/xtensa.dtsi" 2 3 4
+# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/xtensa.dtsi" 2 3
 
 / {
  soc {
@@ -53,48 +60,55 @@
   ranges;
  };
 };
-# 9 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3 4
-# 9 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/adc/adc.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3 4
-# 19 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 1 3 4
-# 34 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 1 3 4
-# 18 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 1 3 4
-# 1083 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_listify.h" 1 3 4
-# 1084 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 2 3 4
-# 19 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
-# 162 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3 4
-# 163 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
-# 193 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3 4
-# 194 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
+# 9 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/adc/adc.h" 1 3
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3 4
-# 197 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3 4
-# 200 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3 4
-# 35 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 2 3 4
-# 20 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3 4
-# 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/adc/adc.h" 2 3 4
-# 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3 4
-# 11 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3 4
-# 12 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/clock/esp32s3_clock.h" 1 3 4
-# 13 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/interrupt-controller/esp32s3-xtensa-intmux.h" 1 3 4
-# 14 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-pinctrl.h" 1 3 4
-# 15 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3 4
+
+
+
+
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 1 3
+# 19 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 1 3
+# 34 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 1 3
+# 18 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 1 3
+# 1083 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_listify.h" 1 3
+# 1084 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_loops.h" 2 3
+# 19 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3
+# 162 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_is_eq.h" 1 3
+# 163 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3
+# 193 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_inc.h" 1 3
+# 194 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3
+
+
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_dec.h" 1 3
+# 197 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3
+
+
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal_util_x2.h" 1 3
+# 200 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_internal.h" 2 3
+# 35 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/sys/util_macro.h" 2 3
+# 20 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/dt-util.h" 2 3
+# 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/adc/adc.h" 2 3
+# 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/gpio/gpio.h" 1 3
+# 11 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/i2c/i2c.h" 1 3
+# 12 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/clock/esp32s3_clock.h" 1 3
+# 13 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/interrupt-controller/esp32s3-xtensa-intmux.h" 1 3
+# 14 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-pinctrl.h" 1 3
+# 15 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_common.dtsi" 2 3
 
 / {
  aliases {
@@ -674,25 +688,25 @@
   };
  };
 };
-# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_wroom_n8.dtsi" 2 3 4
+# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/xtensa/espressif/esp32s3/esp32s3_wroom_n8.dtsi" 2 3
 
 
 &flash0 {
  reg = <0x0 (((8) * 1024) * 1024)>;
 };
 # 9 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts" 2
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/input/input-event-codes.h" 1 3
 # 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts" 2
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/input/esp32-touch-sensor-input.h" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/input/esp32-touch-sensor-input.h" 1 3
 # 11 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts" 2
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp.dtsi" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp.dtsi" 1 3
 
 
 
 
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp_4M.dtsi" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp_4M.dtsi" 1 3
 
 
 
@@ -761,7 +775,7 @@
   };
  };
 };
-# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp.dtsi" 2 3 4
+# 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/dts/vendor/espressif/partitions_0x0_amp.dtsi" 2 3
 # 12 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc_procpu.dts" 2
 # 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc-pinctrl.dtsi" 1
 
@@ -770,10 +784,10 @@
 
 
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp-pinctrl-common.h" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp-pinctrl-common.h" 1 3
 # 8 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc-pinctrl.dtsi" 2
 
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-gpio-sigmap.h" 1 3 4
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pinctrl/esp32s3-gpio-sigmap.h" 1 3
 # 10 "/home/amarjay/Desktop/code/first-zephyr/zephyr/boards/espressif/esp32s3_devkitc/esp32s3_devkitc-pinctrl.dtsi" 2
 
 &pinctrl {
@@ -1035,12 +1049,15 @@
 zephyr_udc0: &usb_otg {
  status = "okay";
 };
-# 0 "<command-line>" 2
+# 365 "<built-in>" 2
 # 1 "./boards/esp32s3_devkitc.overlay" 1
 
 
 
 
+
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/include/zephyr/dt-bindings/pwm/pwm.h" 1 3
+# 7 "./boards/esp32s3_devkitc.overlay" 2
 
 &gpio0 {
     status = "okay";
@@ -1050,6 +1067,8 @@ zephyr_udc0: &usb_otg {
     aliases {
 
         userled = &led0;
+    pwm-0 = &ledc0;
+    pwm-led0 = &pwm_led_blue;
     };
 
     leds {
@@ -1058,6 +1077,36 @@ zephyr_udc0: &usb_otg {
             gpios = <&gpio0 13 (0 << 0)>;
         };
     };
+
+ pwmleds {
+  compatible = "pwm-leds";
+  pwm_led_blue: pwm_led_gpio0_2 {
+   label = "PWM LED0";
+   pwms = <&ledc0 0 1000 (0 << 0)>;
+  };
+ };
 };
-# 0 "<command-line>" 2
-# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/misc/empty_file.c"
+
+&pinctrl {
+ ledc0_default: ledc0_default {
+  group1 {
+   pinmux = <(((2 & 0x3FU) << 0U) | ((0x1FFU & 0x1FFU) << 6U) | ((73 & 0x1FFU) << 15U))>;
+   output-enable;
+  };
+ };
+};
+
+&ledc0 {
+ pinctrl-0 = <&ledc0_default>;
+ pinctrl-names = "default";
+ status = "okay";
+ #address-cells = <1>;
+ #size-cells = <0>;
+ channel0@0 {
+  reg = <0x0>;
+  timer = <0>;
+ };
+};
+# 366 "<built-in>" 2
+# 1 "/home/amarjay/Desktop/code/first-zephyr/zephyr/misc/empty_file.c" 2
+

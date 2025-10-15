@@ -4,6 +4,7 @@
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/logging/log.h>
+
 #ifdef CONFIG_MATHS_LIB
 #include "maths.h"
 #else
@@ -53,12 +54,18 @@ int main(void)
 
 	// Do forever
 	while (1) {
+		state = !state;
 
 		// Change the state of the pin and print
 		LOG_INF("LED state: %d\r\n", state);
+		#ifdef CONFIG_MATHS_LIB
+		int sum;
+		add(5, 3, &sum);
+		LOG_INF("5 + 3 = %d", sum);
+		#endif
 		
 		// Set pin state
-		ret = gpio_pin_set_dt(&led, 0);
+		ret = gpio_pin_set_dt(&led, state);
 		if (ret < 0) {
 			return 0;
 		}

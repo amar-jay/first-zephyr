@@ -3,6 +3,8 @@
  * Adjust pin numbers to match your board variant.
  */
 
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
 &gpio0 {
     status = "okay";
 };
@@ -11,6 +13,8 @@
     aliases {
         /* led0 should alias the LED node label, not the gpio controller */
         userled = &led0;
+				pwm-0 = &ledc0;
+				pwm-led0 = &pwm_led_blue;
     };
 
     leds {
@@ -19,4 +23,33 @@
             gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
         };
     };
+
+	pwmleds {
+		compatible = "pwm-leds";
+		pwm_led_blue: pwm_led_gpio0_2 {
+			label = "PWM LED0";
+			pwms = <&ledc0 0 1000 PWM_POLARITY_NORMAL>;
+		};
+	};
+};
+
+&pinctrl {
+	ledc0_default: ledc0_default {
+		group1 {
+			pinmux = <LEDC_CH0_GPIO2>;
+			output-enable;
+		};
+	};
+};
+
+&ledc0 {
+	pinctrl-0 = <&ledc0_default>;
+	pinctrl-names = "default";
+	status = "okay";
+	#address-cells = <1>;
+	#size-cells = <0>;
+	channel0@0 {
+		reg = <0x0>;
+		timer = <0>;
+	};
 };

@@ -94,6 +94,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/amarjay/Desktop/code/first-zephyr/esp32-basic/build/zephyr/drivers/pwm/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/amarjay/Desktop/code/first-zephyr/esp32-basic/build/zephyr/drivers/serial/cmake_install.cmake")
 endif()
 
