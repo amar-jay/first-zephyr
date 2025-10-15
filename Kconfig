@@ -1,0 +1,10 @@
+
+# Include Zephyr top-level Kconfig so standard symbols are available
+source "$srctree/Kconfig"
+
+# Kconfig for simple_maths library (defined here so prj.conf can set it)
+config MATHS_LIB
+	bool "Enable simple maths library"
+	default n
+	help
+	  Enable the simple_maths library and its API (add, subtract, multiply, divide).

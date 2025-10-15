@@ -14,6 +14,6 @@ add_subdirectory(lib/simple_maths)
 FILE(GLOB app_sources src/*.c)
 target_sources(app PRIVATE ${app_sources})
 # Link the simple_maths library to the application
-zephyr_include_directories(config)
+zephyr_include_directories(config ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
 target_link_libraries(app PRIVATE maths_lib)

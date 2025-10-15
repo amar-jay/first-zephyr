@@ -6,5 +6,5 @@ Result_t divide(int a, int b, int *result) {
 				return DIVIDE_BY_ZERO; // Division by zero error
 		}
 		*result = a / b;
-		return SUCCESS;
+		return NO_ERROR;
 	}

@@ -2,7 +2,7 @@
 #define MATHS_H
 
 typedef enum {
-		SUCCESS = 0,
+		NO_ERROR = 0,
 		FAILURE = -1,
 		DIVIDE_BY_ZERO = -2
 } Result_t;
