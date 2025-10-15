@@ -1,0 +1,6 @@
+{
+  "clangd.path": "clangd",
+  "clangd.arguments": ["--compile-commands-dir=/home/amarjay/Desktop/code/first-zephyr/esp32-basic/build", "--log=verbose"],
+  "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+  "C_Cpp.errorSquiggles": "enabled"
+}

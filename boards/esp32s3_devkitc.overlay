@@ -1,0 +1,22 @@
+/* esp32-basic devicetree overlay
+ * Demonstrates how to enable and alias GPIO, ADC and PWM devices.
+ * Adjust pin numbers to match your board variant.
+ */
+
+&gpio0 {
+    status = "okay";
+};
+
+/ {
+    aliases {
+        /* led0 should alias the LED node label, not the gpio controller */
+        userled = &led0;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        led0: d13 {
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+        };
+    };
+};

@@ -1,0 +1,8 @@
+{
+	"recommendations": [
+		"llvm-vs-code-extensions.vscode-clangd",
+		"mitaki28.vscode-clang",
+		"ms-vscode.cpptools",
+		"ms-vscode.cmake-tools"
+	]
+}

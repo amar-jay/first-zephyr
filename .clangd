@@ -1,0 +1,24 @@
+# Workspace clangd configuration to remove cross-toolchain-specific flags
+# that clang (and clangd) do not recognize. This prevents "Unknown
+# argument" diagnostics coming from the driver when using the project's
+# compile_commands.json produced by the Zephyr/toolchain.
+
+CompileFlags:
+  Remove:
+    - -fno-printf-return-value
+    - -fno-reorder-functions
+    - -fstrict-volatile-bitfields
+    - -mlongcalls
+    - --param=min-pagesize=0
+    - -specs=picolibc.specs
+    - -fno-defer-pop
+    - -fno-pic
+    - -fno-pie
+    - -fno-asynchronous-unwind-tables
+    - -fmacro-prefix-map=/home/amarjay/Desktop/code/first-zephyr/esp32-basic=CMAKE_SOURCE_DIR
+    - -fmacro-prefix-map=/home/amarjay/Desktop/code/first-zephyr/zephyr=ZEPHYR_BASE
+    - -fmacro-prefix-map=/home/amarjay/Desktop/code/first-zephyr=WEST_TOPDIR
+
+# You can add any other flags clangd complains about to the Remove list.
+# After editing this file, reload VS Code (Developer: Reload Window) to
+# make clangd pick up the change.

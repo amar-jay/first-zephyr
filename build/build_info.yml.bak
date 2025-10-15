@@ -1,0 +1,5 @@
+west:
+  command: /home/amarjay/Desktop/code/first-zephyr/.venv/bin/west build -b esp32s3_devkitc/esp32s3/procpu
+    --pristine -- -DDTC_OVERLAY_FILE=boards/esp32s3_devkitc.overlay
+  topdir: /home/amarjay/Desktop/code/first-zephyr
+  version: 1.5.0

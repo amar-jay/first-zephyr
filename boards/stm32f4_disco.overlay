@@ -1,0 +1,35 @@
+/* STM32F4-Discovery devicetree overlay
+ * Adjust pin numbers if your board variant differs.
+ */
+
+&gpioa {
+    status = "okay";
+};
+
+&gpioc {
+    status = "okay";
+};
+
+/ {
+    aliases {
+        /* Common Zephyr samples use led0 and sw0/button0 aliases */
+        userled = &led0; /* alias to LED node below */
+        userswitch = &button0; /* alias to button node below */
+    };
+
+    leds {
+        compatible = "gpio-leds";
+
+        led0: d13 {
+            gpios = <&gpiod 13 GPIO_ACTIVE_HIGH>; /* PC13 is user LED on many STM32F4 variants */
+        };
+    };
+
+    keys {
+        compatible = "gpio-keys";
+
+        button0: a0 {
+            gpios = <&gpioa 0 GPIO_ACTIVE_LOW>; /* PA0 is often user button; verify for your board */
+        };
+    };
+};
