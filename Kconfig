@@ -1,4 +1,3 @@
-
 # Include Zephyr top-level Kconfig so standard symbols are available
 source "$srctree/Kconfig"
 

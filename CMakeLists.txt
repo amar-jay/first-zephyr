@@ -12,7 +12,8 @@ project(esp32_basic)
 add_subdirectory(lib/simple_maths)
 
 FILE(GLOB app_sources src/*.c)
-target_sources(app PRIVATE ${app_sources})
+FILE(GLOB app_headers include/*.h)
+target_sources(app PRIVATE ${app_sources} ${app_headers})
 # Link the simple_maths library to the application
 zephyr_include_directories(config ${CMAKE_CURRENT_SOURCE_DIR}/config)
 

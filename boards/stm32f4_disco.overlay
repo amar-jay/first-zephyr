@@ -14,7 +14,7 @@
     aliases {
         /* Common Zephyr samples use led0 and sw0/button0 aliases */
         userled = &led0; /* alias to LED node below */
-        userswitch = &button0; /* alias to button node below */
+        userswitch = &btn0; /* alias to button node below */
     };
 
     leds {
@@ -28,7 +28,7 @@
     keys {
         compatible = "gpio-keys";
 
-        button0: a0 {
+        btn0: a0 {
             gpios = <&gpioa 0 GPIO_ACTIVE_LOW>; /* PA0 is often user button; verify for your board */
         };
     };
