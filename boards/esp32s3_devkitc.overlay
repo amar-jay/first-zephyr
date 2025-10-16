@@ -14,6 +14,8 @@
         /* led0 should alias the LED node label, not the gpio controller */
         userled = &led0;
 				userswitch = &btn0;
+        useradc = &adc0;
+        useradcch = &adc0_ch0;
     };
 
     leds {
@@ -31,5 +33,20 @@
         btn0: d10 {
             gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
         };
+    };
+};
+
+&adc0 {
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    adc0_ch0: channel@0 {
+        reg = <0>;
+        zephyr,gain = "ADC_GAIN_1_4";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,vref-mv = <3894>;
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,resolution = <12>;
     };
 };

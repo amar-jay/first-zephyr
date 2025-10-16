@@ -13,7 +13,8 @@ int main(void)
 {
 	// blink(&led);
 	// button_click();
-	blink_n_click();
+	// blink_n_click();
+	adc_read_val();
 	//  random_print();
 	return 0;
 }

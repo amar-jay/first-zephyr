@@ -7,5 +7,6 @@ int random_print(void);
 int blink();
 int button_click(void);
 int blink_n_click(void);
+int adc_read_val(void);
 
 #endif // MAIN_H
