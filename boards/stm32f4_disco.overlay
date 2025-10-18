@@ -2,6 +2,13 @@
  * Adjust pin numbers if your board variant differs.
  */
 
+/* esp32-basic devicetree overlay
+ * Demonstrates how to enable and alias GPIO, ADC and PWM devices.
+ * Adjust pin numbers to match your board variant.
+ */
+
+#include <zephyr/dt-bindings/pwm/pwm.h>
+
 &gpioa {
     status = "okay";
 };
@@ -10,11 +17,14 @@
     status = "okay";
 };
 
+
 / {
     aliases {
-        /* Common Zephyr samples use led0 and sw0/button0 aliases */
-        userled = &led0; /* alias to LED node below */
-        userswitch = &btn0; /* alias to button node below */
+        /* led0 should alias the LED node label, not the gpio controller */
+        userled = &led0;
+				userswitch = &btn0;
+        useradc = &adc1;
+        useradcch = &adc1_ch0;
     };
 
     leds {
@@ -25,11 +35,29 @@
         };
     };
 
-    keys {
+		buttons {
         compatible = "gpio-keys";
+        debounce-interval-ms = <50>;
+        polling-mode;
 
         btn0: a0 {
             gpios = <&gpioa 0 GPIO_ACTIVE_LOW>; /* PA0 is often user button; verify for your board */
         };
+    };
+};
+
+&adc1 {
+    status = "okay";
+    #address-cells = <1>;
+    #size-cells = <0>;
+    // vref-mv = <1210>;
+
+    adc1_ch0: channel@0 {
+        reg = <0>;
+        zephyr,gain = "ADC_GAIN_1_4";
+        zephyr,reference = "ADC_REF_INTERNAL";
+        zephyr,vref-mv = <1210>;
+        zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+        zephyr,resolution = <12>;
     };
 };

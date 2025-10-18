@@ -6,8 +6,22 @@
 #define ADC_CHANNEL DT_ALIAS(useradcch)
 #define ADC_DEVICE DT_ALIAS(useradc)
 
+
+
+
+// Get Devicetree configurations
+#if !DT_NODE_HAS_STATUS(ADC_CHANNEL, okay)
+  #error "Unsupported board: adc channel devicetree alias is not defined"
+#endif
+
+#if !DT_NODE_HAS_STATUS(ADC_DEVICE, okay)
+	#error "Unsupported board: adc device devicetree alias is not defined"
+#endif
+
 static const struct device *adc_dev = DEVICE_DT_GET(ADC_DEVICE);
 static const struct adc_channel_cfg adc_channel = ADC_CHANNEL_CFG_DT(ADC_CHANNEL);
+
+
 
 int adc_read_val(void)
 {
