@@ -10,6 +10,7 @@ project(esp32_basic)
 
 # Include the library (via directory)
 add_subdirectory(lib/simple_maths)
+add_subdirectory(lib/bme280)
 
 FILE(GLOB app_sources src/*.c)
 FILE(GLOB app_headers include/*.h)
@@ -18,3 +19,4 @@ target_sources(app PRIVATE ${app_sources} ${app_headers})
 zephyr_include_directories(config ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
 target_link_libraries(app PRIVATE maths_lib)
+target_link_libraries(app PRIVATE bme280_lib)

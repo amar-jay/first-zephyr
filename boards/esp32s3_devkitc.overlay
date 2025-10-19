@@ -5,17 +5,13 @@
 
 //#include <zephyr/dt-bindings/pwm/pwm.h>
 
-&gpio0 {
-    status = "okay";
-};
-
 / {
     aliases {
         /* led0 should alias the LED node label, not the gpio controller */
         userled = &led0;
 				userswitch = &btn0;
         useradc = &adc0;
-        useradcch = &adc0_ch0;
+        useradcch = &adc0_ch1;
     };
 
     leds {
@@ -36,12 +32,16 @@
     };
 };
 
+&gpio0 {
+    status = "okay";
+};
+
 &adc0 {
     status = "okay";
     #address-cells = <1>;
     #size-cells = <0>;
 
-    adc0_ch0: channel@0 {
+    adc0_ch1: channel@1 {
         reg = <0>;
         zephyr,gain = "ADC_GAIN_1_4";
         zephyr,reference = "ADC_REF_INTERNAL";
