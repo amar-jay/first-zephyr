@@ -1,3 +1,5 @@
+#ifndef DEVICE_TREE_H
+#define DEVICE_TREE_H
 #include <zephyr/drivers/gpio.h>
 
 /* 1000 msec = 1 sec */
@@ -22,4 +24,6 @@
 #define SW0_NODE	DT_ALIAS(sw0)
 #if !DT_NODE_HAS_STATUS_OKAY(SW0_NODE)
 #error "Unsupported board: sw0 devicetree alias is not defined"
-#endif
+#endif // SW0_NODE
+
+#endif // DEVICE_TREE_H

@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/kernel.h>
-#include "./device_tree.c"
+#include "../include/device_tree.h"
+#include "../include/main.h"
 
 int init_pin(const struct gpio_dt_spec *led) {
 	int ret;
@@ -28,7 +29,7 @@ int toggle_pin(const struct gpio_dt_spec *led) {
 	return 0;
 }
 
-int simple_led_blink(void) {
+int simple_blink(void){
   int ret;
   const struct gpio_dt_spec led_pins[] = {LED0, LED1, LED2, LED3};
 

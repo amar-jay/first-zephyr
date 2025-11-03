@@ -1,4 +1,4 @@
-#include "./device_tree.c"
+#include "../include/device_tree.h"
 #include <zephyr/kernel.h>
 #include <zephyr/sys/printk.h>
 #include <zephyr/device.h>
