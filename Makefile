@@ -20,9 +20,9 @@ STM32F4_FLAGS := -DDTC_OVERLAY_FILE=boards/stm32f4_disco.overlay \
                  -DCONF_FILE="$(PWD)/prj.conf;$(PWD)/boards/stm32f4_disco.conf" \
                  -DBOARD=stm32f4_disco
 
-.PHONY: all gen_esp32s3_devkitc gen_stm32f4_disco clean
+.PHONY: gen_esp32s3_devkitc gen_stm32f4_disco clean
 
-all: gen_esp32s3_devkitc gen_stm32f4_disco
+#all: gen_esp32s3_devkitc gen_stm32f4_disco
 
 gen_esp32s3_devkitc:
 	@echo "[ESP32S3] Configuring build with Zephyr..."

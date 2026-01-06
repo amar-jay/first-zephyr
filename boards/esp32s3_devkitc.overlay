@@ -12,6 +12,10 @@
 				userswitch = &btn0;
         useradc = &adc0;
         useradcch = &adc0_ch1;
+
+				// gnss = &gnss;
+				bme280 = &bme280;
+				ms5607 = &ms5607;
     };
 
     leds {
@@ -36,6 +40,37 @@
     status = "okay";
 };
 
+
+// &uart1 {
+// 		status = "okay";
+// 		current-speed = <115200>;
+//     pinctrl-0 = <&uart1_pins>;
+//     pinctrl-names = "default";
+
+// 		gnss: u_blox_m10 {
+// 			status = "okay";
+// 			compatible = "u-blox,m8";
+// 			// initial-baudrate = <115200>;
+// 		};
+// };
+
+
+&i2c0 {
+		status = "okay"; // DEFAULT: pin 8 (SDA), pin 9 (SCL) 
+		pinctrl-0 = <&i2c0_pins>;
+		pinctrl-names = "default";
+
+    ms5607: ms5607@77 {
+        compatible = "meas,ms5607";
+        reg = <0x77>;
+    };
+
+		bme280: bme280@76 {
+				compatible = "bosch,bme280";
+				reg = <0x76>;
+		};
+};
+
 &adc0 {
     status = "okay";
     #address-cells = <1>;
@@ -50,3 +85,26 @@
         zephyr,resolution = <12>;
     };
 };
+
+&pinctrl {
+	uart1_pins: uart1_pins {
+		group1 {
+			pinmux = <UART1_TX_GPIO17>;
+			output-high;
+		};
+		group2 {
+			pinmux = <UART1_RX_GPIO18>;
+			bias-pull-up;
+		};
+	};
+
+  i2c0_pins: i2c0_pins {
+      group1 {
+          pinmux = <
+              I2C0_SDA_GPIO35
+              I2C0_SCL_GPIO36
+          >;
+      };
+  };
+};
+
