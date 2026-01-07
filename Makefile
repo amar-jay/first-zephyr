@@ -12,6 +12,10 @@ PWD := $(shell pwd)
 ZEPHYR_COMMON_FLAGS := -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -GNinja
 
 # Board-specific configurations
+NATIVE_SIM_FLAGS := -DDTC_OVERLAY_FILE=boards/native_sim_64.overlay \
+                 -DCONF_FILE="$(PWD)/prj.conf;$(PWD)/boards/native_sim_64.conf" \
+                 -DBOARD=native_sim/native/64
+
 ESP32S3_FLAGS := -DDTC_OVERLAY_FILE=boards/esp32s3_devkitc.overlay \
                  -DCONF_FILE="$(PWD)/prj.conf;$(PWD)/boards/esp32s3_devkitc.conf" \
                  -DBOARD=esp32s3_devkitc/esp32s3/procpu
@@ -23,6 +27,12 @@ STM32F4_FLAGS := -DDTC_OVERLAY_FILE=boards/stm32f4_disco.overlay \
 .PHONY: gen_esp32s3_devkitc gen_stm32f4_disco clean
 
 #all: gen_esp32s3_devkitc gen_stm32f4_disco
+
+gen_native_sim:
+	@echo "[SIM] Configuring build with Zephyr..."
+	cmake -S "$(PROJECT_ROOT)" -B "$(BUILD_DIR)" $(ZEPHYR_COMMON_FLAGS) $(NATIVE_SIM_FLAGS)
+	@echo "compile_commands.json regenerated at $(BUILD_DIR)/compile_commands.json"
+	west build -b esp32s3_devkitc/esp32s3/procpu --pristine -- $(NATIVE_SIM_FLAGS)
 
 gen_esp32s3_devkitc:
 	@echo "[ESP32S3] Configuring build with Zephyr..."

@@ -1,0 +1,69 @@
+/ {
+    aliases {
+        userled    = &led0;
+        userswitch = &btn0;
+        adc        = &adc_sim;
+        bme280     = &bme280;
+        ms5607     = &ms5607;
+    };
+
+    /* GPIO Simulator Controller */
+    gpio_sim: gpio_sim {
+        compatible = "zephyr,gpio-emul";
+        status = "okay";
+        gpio-controller;
+        #gpio-cells = <2>;
+        ngpios = <2>;
+    };
+
+    leds {
+        compatible = "gpio-leds";
+        led0: led_0 {
+            gpios = <&gpio_sim 0 0>;
+            label = "User LED";
+        };
+    };
+
+    buttons {
+        compatible = "gpio-keys";
+        btn0: btn_0 {
+            gpios = <&gpio_sim 1 0>;
+            label = "User Button";
+        };
+    };
+
+    adc_sim: adc {
+        compatible = "zephyr,adc-emul";
+        status = "okay";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        nchannels = <2>;
+        #io-channel-cells = <1>;
+        ref-internal-mv = <3894>;
+
+        adc0_ch1: channel@1 {
+            reg = <1>;
+            zephyr,gain = "ADC_GAIN_1_4";
+            zephyr,reference = "ADC_REF_INTERNAL";
+            zephyr,acquisition-time = <0>;
+            zephyr,resolution = <12>;
+        };
+    };
+
+    sensors {
+    };
+};
+
+&i2c0 {
+	status = "okay";
+
+	bme280: bme280@76 {
+		compatible = "bosch,bme280";
+		reg = <0x76>;
+	};
+
+	ms5607: ms5607@77 {
+		compatible = "meas,ms5607";
+		reg = <0x77>;
+	};
+};

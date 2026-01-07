@@ -19,4 +19,4 @@ target_sources(app PRIVATE ${app_sources} ${app_headers})
 zephyr_include_directories(config ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
 target_link_libraries(app PRIVATE maths_lib)
-target_link_libraries(app PRIVATE bme280_lib)
+# target_link_libraries(app PRIVATE bme280_lib)

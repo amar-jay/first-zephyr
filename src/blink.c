@@ -6,8 +6,8 @@
 
 #ifdef CONFIG_MATHS_LIB
 #include "maths.h"
-#else
-#warning "No maths library selected"
+// #else
+// #warning "No maths library selected"
 #endif
 
 
